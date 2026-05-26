@@ -1,0 +1,10 @@
+Add the final Loom, Google Drive, or YouTube demo video link here after recording.
+
+Recommended demo length: 90 seconds.
+
+Suggested flow:
+1. Homepage hero and scroll.
+2. Portfolio filters.
+3. Project detail page.
+4. Book consultation page.
+5. Mobile responsive preview.

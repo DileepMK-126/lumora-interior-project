@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lumora Interiors Deployment Guide</title>
+  <style>
+    @page { margin: 22mm 18mm; }
+    body {
+      color: #111;
+      background: #F8F5F2;
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      line-height: 1.55;
+    }
+    h1, h2, h3 { font-family: Georgia, serif; letter-spacing: 0; }
+    h1 { font-size: 30pt; line-height: 1; margin: 0 0 18pt; }
+    h2 { font-size: 18pt; margin: 24pt 0 8pt; border-top: 1px solid #C8A96B; padding-top: 14pt; }
+    h3 { font-size: 13pt; margin: 16pt 0 6pt; }
+    p { margin: 0 0 8pt; }
+    ul { margin: 0 0 10pt 18pt; padding: 0; }
+    li { margin: 0 0 5pt; }
+    code { color: #6b5529; font-family: Consolas, monospace; }
+    table { width: 100%; border-collapse: collapse; margin: 10pt 0; }
+    td { border: 1px solid rgba(17,17,17,.22); padding: 6pt; vertical-align: top; }
+  </style>
+</head>
+<body><h1>Deployment Guide</h1><h2>Local Build</h2><p>1. Install WordPress locally using LocalWP, XAMPP, or a hosting staging site.</p><p>2. Install Hello Elementor.</p><p>3. Install required plugins from <code>wordpress-site-files/plugin-setup.md</code>.</p><p>4. Configure global colors and fonts.</p><p>5. Build pages using the Elementor specs.</p><p>6. Add global CSS in Elementor Site Settings or WordPress Customizer.</p><p>7. Add forms through WPForms.</p><p>8. Optimize images and cache.</p><h2>Hosting Recommendation</h2><p>Use a fast WordPress host with LiteSpeed or strong caching support. For a portfolio submission, a staging URL is acceptable if it loads quickly and has no admin bars, placeholder text, or broken links.</p><h2>Pre-Launch QA</h2><ul><li>Check desktop, tablet, and mobile.</li><li>Test every CTA.</li><li>Submit every form once.</li><li>Verify sticky header and mobile menu.</li><li>Verify before/after slider.</li><li>Verify gallery filters.</li><li>Run Lighthouse on Home, Portfolio, and Book Consultation.</li><li>Remove unused pages, draft templates, and demo content.</li></ul><h2>Migration</h2><p>Use one of these:</p><ul><li>All-in-One WP Migration</li><li>Duplicator</li><li>Hosting migration tool</li></ul><p>Before migration:</p><ul><li>Clear cache.</li><li>Export Elementor settings.</li><li>Export WPForms.</li><li>Backup database.</li></ul><p>After migration:</p><ul><li>Regenerate Elementor CSS.</li><li>Flush permalinks.</li><li>Re-save LiteSpeed settings.</li><li>Check image URLs.</li><li>Run final Lighthouse test.</li></ul></body>
+</html>

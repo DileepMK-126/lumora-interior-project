@@ -1,0 +1,170 @@
+/* Lumora Interiors - Elementor global polish */
+:root {
+  --lumora-black: #111111;
+  --lumora-white: #F8F5F2;
+  --lumora-gold: #C8A96B;
+  --lumora-gray: #D9D9D9;
+  --lumora-ink-soft: rgba(17, 17, 17, 0.72);
+  --lumora-white-soft: rgba(248, 245, 242, 0.76);
+  --lumora-border-dark: rgba(248, 245, 242, 0.14);
+  --lumora-border-light: rgba(17, 17, 17, 0.12);
+  --lumora-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--lumora-white);
+  color: var(--lumora-black);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: var(--lumora-gold);
+  color: var(--lumora-black);
+}
+
+.lumora-section {
+  padding-block: clamp(48px, 8vw, 112px);
+}
+
+.lumora-container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+.lumora-eyebrow {
+  color: var(--lumora-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.lumora-display,
+.lumora-h1,
+.lumora-h2,
+.lumora-h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0;
+}
+
+.lumora-display {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 0.96;
+}
+
+.lumora-h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+}
+
+.lumora-h2 {
+  font-size: clamp(34px, 4.6vw, 52px);
+  line-height: 1.08;
+}
+
+.lumora-h3 {
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.15;
+}
+
+.lumora-button .elementor-button {
+  min-height: 52px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: transform 220ms var(--lumora-ease), background 220ms var(--lumora-ease), border-color 220ms var(--lumora-ease);
+}
+
+.lumora-button .elementor-button:hover {
+  transform: translateY(-2px);
+}
+
+.lumora-card {
+  border: 1px solid var(--lumora-border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 500ms var(--lumora-ease), box-shadow 500ms var(--lumora-ease), border-color 500ms var(--lumora-ease);
+}
+
+.lumora-card:hover {
+  border-color: rgba(200, 169, 107, 0.42);
+  box-shadow: 0 24px 70px rgba(17, 17, 17, 0.12);
+  transform: translateY(-6px);
+}
+
+.lumora-image-zoom img {
+  transition: transform 700ms var(--lumora-ease), filter 700ms var(--lumora-ease);
+}
+
+.lumora-image-zoom:hover img {
+  filter: saturate(1.03) contrast(1.03);
+  transform: scale(1.045);
+}
+
+.lumora-glass {
+  background: rgba(17, 17, 17, 0.46);
+  border: 1px solid var(--lumora-border-dark);
+  backdrop-filter: blur(18px);
+}
+
+.lumora-progress {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: var(--scroll-progress, 0%);
+  height: 3px;
+  background: var(--lumora-gold);
+}
+
+.lumora-floating-whatsapp,
+.lumora-back-top {
+  position: fixed;
+  z-index: 999;
+  right: 22px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  box-shadow: 0 16px 34px rgba(17, 17, 17, 0.18);
+  transition: transform 220ms var(--lumora-ease);
+}
+
+.lumora-floating-whatsapp {
+  bottom: 88px;
+  background: #1f7a4d;
+  color: #fff;
+}
+
+.lumora-back-top {
+  bottom: 28px;
+  background: var(--lumora-black);
+  color: var(--lumora-white);
+}
+
+.lumora-floating-whatsapp:hover,
+.lumora-back-top:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+  .lumora-container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .lumora-button .elementor-button {
+    width: 100%;
+    min-height: 48px;
+    padding-inline: 20px;
+  }
+}
